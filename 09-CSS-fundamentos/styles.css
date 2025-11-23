@@ -2,3 +2,51 @@
   border-radius: 8px;
   background-color: #f2f2f2;
 }
+header nav[aria-label="Navegación principal"] a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+header nav[aria-label="Navegación principal"] ul li:first-child a {
+  color: #0066cc;
+}
+nav[aria-label="Ruta de navegación"] a {
+  font-size: 0.9rem;
+  color: #555;
+}
+main article h1 {
+  font-size: 2rem;
+  color: #222;
+}
+article header figure figcaption p:first-of-type {
+  font-weight: bold;
+  color: #333;
+}
+article header figure figcaption p:nth-of-type(2) span {
+  color: #888;
+}
+article section[aria-label="Puntos destacados"] ul li {
+  padding-left: 1.2rem;
+  list-style-type: square;
+}
+article section aside[aria-label="Llamado a la acción"] p a {
+  background-color: #ffefc2;
+  padding: 6px 10px;
+}
+
+/*No hay ningún em*/
+article li em {
+  font-style: italic;
+  color: #c00;
+}
+section[aria-labelledby="paso-1"] h3 {
+  color: #006699;
+}
+article section aside[aria-label="Promoción integrada"] {
+  background-color: #f7fbff;
+  border: 1px solid #cce4ff;
+  padding: 1rem;
+}
+section[aria-labelledby="pagos"] a {
+  color: #0044aa;
+  text-decoration: underline;
+}
