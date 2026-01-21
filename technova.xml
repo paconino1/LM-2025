@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecommerce>
+  <tienda moneda="EUR" pais="ES" abierta="true" telefono="null">
+    <nombre>TecnoNova</nombre>
+    <iva>0.21</iva>
+    <envioGratisDesde>50.00</envioGratisDesde>
+    <direccion>
+      <calle>Calle de la Tecnología, 42</calle>
+      <ciudad>Madrid</ciudad>
+      <codigoPostal>28001</codigoPostal>
+    </direccion>
+    <fechaHoraUltimaActualizacion>2024-06-15T10:30:00Z</fechaHoraUltimaActualizacion>
+  </tienda>
+
+  <catalogo> 
+    <categorias>
+      <hardware id="1">
+        <nombre>Componentes Hardware</nombre>
+        <descripcion>Procesadores, tarjetas gráficas, memoria RAM y otros componentes de hardware</descripcion>
+      </hardware>
+
+      <perifericos id="2">
+        <nombre>Periféricos</nombre>
+        <descripcion>Teclados, ratones, monitores y otros dispositivos de entrada/salida</descripcion>
+      </perifericos>
+
+      <software id="3">
+        <nombre>Software</nombre>
+        <descripcion>Aplicaciones y sistemas operativos</descripcion>
+      </software>
+
+    </categorias>
+
+    <productos>
+      <producto id="SKU-2001" categoriaId="1" activo="true">
+      <nombre>Disco SSD 1TB</nombre>
+      <marca>Samsung</marca>
+      <etiquetas>
+        <etiqueta>almacenamiento</etiqueta>
+        <etiqueta>NVMe</etiqueta>
+      </etiquetas>
+      <precio>
+        <base>120.00</base>
+        <ivaPct>21</ivaPct>
+      </precio>
+      <shipping>
+        <pesoKg>0.05</pesoKg>
+        <fragil>false</fragil>
+      </shipping>
+      <almacenes>
+        <almacen nombre="Madrid" unidades="15"/>
+        <almacen nombre="Barcelona" unidades="10"/>
+      </almacenes>
+      </producto>
+
+      <producto id="SKU-3002" categoriaId="2" activo="false">
+      <nombre>Teclado inalámbrico</nombre>
+      <marca>Logitech</marca>
+      <etiquetas>
+        <etiqueta>teclado</etiqueta>
+      </etiquetas>
+      <precio>
+        <base>89.00</base>
+        <ivaPct>21</ivaPct>
+      </precio>
+      <shipping>
+        <pesoKg>0.8</pesoKg>
+        <fragil>false</fragil>
+      </shipping>
+      <stock>0</stock>
+      </producto>
+
+      <producto id="SKU-4003" categoriaId="3" activo="true">
+      <nombre>Suite ofimática</nombre>
+      <marca>Microsoft</marca>
+      <etiquetas>
+        <etiqueta>ofimática</etiqueta>
+      </etiquetas>
+      <precio>
+        <base>99.99</base>
+        <ivaPct>21</ivaPct>
+      </precio>
+      <shipping>
+        <pesoKg>0.00</pesoKg>
+        <fragil>false</fragil>
+      </shipping>
+      <variantes>
+        <variante id="V1">
+        <caracteristicas>
+          <tipo>Personal</tipo>
+          <usuarios>1</usuarios>
+        </caracteristicas>
+        <stock>30</stock>
+        </variante>
+        <variante id="V2">
+        <caracteristicas>
+          <tipo>Familiar</tipo>
+          <usuarios>6</usuarios>
+        </caracteristicas>
+        <stock>12</stock>
+        </variante>
+      </variantes>
+      </producto>
+
+    </productos>
+
+  </catalogo>
+
+  <usuarios>
+    <usuario id="U-001" rol="cliente" activo="true">
+      <nombre>Laura Gómez Pérez</nombre>
+      <email>lauragomez@gmail.com</email>
+      <premium>false</premium>
+    </usuario>
+
+    <usuario id="U-002" rol="cliente" activo="true">
+      <nombre>Pedro Carpa Márquez</nombre>
+      <email>pedrocarpa@gmail.com</email>
+      <premium>true</premium>
+    </usuario>
+
+    <usuario id="U-003" rol="cliente" activo="false">
+      <nombre>Ana Ruiz López</nombre>
+      <email>anaruiz@gmail.com</email>
+      <premium>false</premium>
+    </usuario>
+  </usuarios>
+
+  <pedidos>
+    <pedido id="P-1001" usuarioId="U-001" fecha="2024-06-10" estado="enviado">
+      <lista>
+        <producto productoId="SKU-2001" cantidad="1" precioUnitario="120.00"/>
+        <producto productoId="SKU-4003" varianteId="V1" cantidad="1" precioUnitario="99.99"/>
+      </lista>
+      <total>219.99</total>
+    </pedido>
+
+    <pedido id="P-1002" usuarioId="U-002" fecha="2024-06-12" estado="pendiente">
+      <lista>
+        <producto productoId="SKU-4003" varianteId="V2" cantidad="1" precioUnitario="99.99"/>
+      </lista>
+      <total>99.99</total>
+    </pedido>
+
+    <pedido id="P-1003" usuarioId="U-003" fecha="2024-06-13" estado="cancelado">
+      <lista>
+        <producto productoId="SKU-3002" cantidad="1" precioUnitario="89.00"/>
+      </lista>
+      <total>89.00</total>
+    </pedido>
+  </pedidos>
+</ecommerce>
